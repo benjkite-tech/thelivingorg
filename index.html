@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>The Living Org — Human-powered, AI-accelerated</title>
+<meta name="description" content="A directional concept from Yite Labs: the org AI is pulling us toward. Human-powered, AI-accelerated, and built to stay fluid while everyone else keeps rebuilding."/>
+<meta name="author" content="Ben Kite · Yite Labs"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="The Living Org — Human-powered, AI-accelerated"/>
+<meta property="og:description" content="The org AI is pulling us toward — built to stay fluid while everyone else keeps rebuilding."/>
+<meta property="og:image" content="og-image.png"/>
+<meta property="og:site_name" content="Yite Labs"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="The Living Org — Human-powered, AI-accelerated"/>
+<meta name="twitter:description" content="The org AI is pulling us toward — built to stay fluid while everyone else keeps rebuilding."/>
+<meta name="twitter:image" content="og-image.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1C0F08;
+  --ground:#FAF8F3;
+  --paper:#FFFDF8;
+  --ember:#E8501A;
+  --moss:#1A7A4A;
+  --denim:#2D4FA8;
+  --lavender:#7B5EA7;
+  --harvest:#C8A830;
+  --ash:#8A7260;
+  --chalk:#E4DDD0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Space Grotesk",ui-sans-serif,system-ui,-apple-system,sans-serif;
+  line-height:1.4;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}
+
+/* ---- shared type ---- */
+.label{
+  font-family:"Space Mono",ui-monospace,monospace;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:12px;
+  color:var(--ash);
+}
+h1,h2,h3,.display{
+  font-family:"Bebas Neue",ui-sans-serif,sans-serif;
+  font-weight:400;
+}
+
+/* ---- header ---- */
+header{
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--chalk);
+}
+.logo{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:26px;
+  letter-spacing:.01em;
+}
+nav{display:flex;gap:26px}
+nav a{
+  font-family:"Space Mono",monospace;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--ash);
+  text-decoration:none;
+}
+nav a:hover{color:var(--ink)}
+.status{display:flex;align-items:center;gap:9px}
+.status .label{color:var(--ash)}
+.status-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--moss);
+  box-shadow:0 0 0 0 rgba(26,122,74,.5);
+  animation:pulse 2.6s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(26,122,74,.45)}
+  70%{box-shadow:0 0 0 7px rgba(26,122,74,0)}
+  100%{box-shadow:0 0 0 0 rgba(26,122,74,0)}
+}
+
+/* ---- hero ---- */
+.hero{padding:84px 0 96px;border-bottom:1px solid var(--ink)}
+.hero .meta{margin-bottom:60px;max-width:560px}
+.hero .meta .label{display:block;color:var(--ink);margin-bottom:8px}
+.hero .meta p{margin:0;font-size:16px;color:var(--ash);line-height:1.45}
+h1{
+  margin:0;
+  font-size:clamp(76px,13vw,184px);
+  line-height:.82;
+  letter-spacing:.005em;
+}
+.hero-copy{
+  max-width:760px;
+  margin-top:40px;
+  font-size:clamp(21px,2.6vw,28px);
+  line-height:1.28;
+  letter-spacing:-.02em;
+  color:var(--ash);
+}
+.hero-copy strong{color:var(--ink);font-weight:600}
+.hero-spine{
+  margin:28px 0 0;
+  font-family:"Bebas Neue",sans-serif;
+  font-size:clamp(30px,5vw,58px);
+  line-height:.95;letter-spacing:.02em;
+}
+.hero-spine span:first-child{color:var(--ink)}
+.hero-spine span:last-child{color:var(--ember)}
+
+/* ---- section frame ---- */
+section{padding:74px 0;border-bottom:1px solid var(--chalk)}
+.section-head{
+  display:grid;
+  grid-template-columns:240px 1fr;
+  gap:48px;
+  margin-bottom:40px;
+}
+.eyebrow .label{display:block}
+.eyebrow .num{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:40px;
+  line-height:1;
+  color:var(--ink);
+}
+.eyebrow .name{
+  display:block;
+  margin-top:4px;
+  font-size:15px;
+  color:var(--ash);
+  letter-spacing:-.01em;
+}
+h2{
+  margin:0;
+  font-size:clamp(46px,6.6vw,96px);
+  line-height:.9;
+  letter-spacing:.005em;
+}
+.big-copy{
+  max-width:720px;
+  margin:22px 0 0;
+  color:var(--ash);
+  font-size:clamp(19px,2.2vw,23px);
+  line-height:1.34;
+  letter-spacing:-.015em;
+}
+.big-copy strong{color:var(--ink);font-weight:600}
+
+/* ---- principle row (merged human stance) ---- */
+.stance{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+  margin-top:8px;
+}
+.stance .card{border-top:3px solid var(--ink);padding-top:16px}
+.stance .card:nth-child(1){border-color:var(--ink)}
+.stance .card:nth-child(2){border-color:var(--ember)}
+.stance h3{margin:6px 0 8px;font-size:30px;line-height:1;letter-spacing:.01em}
+.stance p{margin:0;color:var(--ash);font-size:17px;line-height:1.42}
+.tag-mono{
+  font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ash);
+}
+
+/* ---- loop signature ---- */
+.loop-panel{
+  display:grid;
+  grid-template-columns:340px 1fr;
+  gap:56px;
+  align-items:center;
+  margin-top:10px;
+}
+.loop-stage{position:relative;width:300px;height:300px;margin:auto}
+.loop-svg{position:absolute;inset:0;width:100%;height:100%}
+.loop-svg .ring{fill:none;stroke:var(--chalk);stroke-width:1.5}
+.loop-svg .arc{
+  fill:none;stroke:var(--ember);stroke-width:2.5;stroke-linecap:round;
+  stroke-dasharray:930;stroke-dashoffset:930;
+  transform:rotate(-90deg);transform-origin:center;
+  animation:trace 3.4s ease-in-out forwards .3s;
+}
+@keyframes trace{to{stroke-dashoffset:0}}
+.loop-core{
+  position:absolute;inset:90px;border-radius:999px;
+  background:var(--ink);color:var(--ground);
+  display:grid;place-items:center;text-align:center;
+  font-family:"Bebas Neue",sans-serif;font-size:20px;line-height:.95;letter-spacing:.03em;
+  padding:6px;
+}
+.loop-node{
+  position:absolute;width:78px;height:78px;border-radius:999px;
+  border:1.5px solid var(--ink);background:var(--paper);
+  display:grid;place-items:center;
+  font-family:"Bebas Neue",sans-serif;font-size:21px;letter-spacing:.03em;
+}
+.n1{left:111px;top:-16px;border-color:var(--ember)}
+.n2{right:-16px;top:111px;border-color:var(--denim)}
+.n3{left:111px;bottom:-16px;border-color:var(--moss)}
+.n4{left:-16px;top:111px;border-color:var(--lavender)}
+.loop-copy h3{margin:0 0 14px;font-size:clamp(34px,4.4vw,48px);line-height:.95;letter-spacing:.01em}
+.loop-copy p{margin:0;font-size:20px;line-height:1.34;color:var(--ash);letter-spacing:-.01em}
+
+/* ---- concrete trace (the signature ground-touch) ---- */
+.trace{
+  margin-top:48px;
+  border:1px solid var(--ink);
+  border-radius:20px;
+  overflow:hidden;
+  background:var(--paper);
+}
+.trace-head{
+  display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  padding:20px 26px;border-bottom:1px solid var(--chalk);
+}
+.trace-head .label{color:var(--ember)}
+.trace-head h3{margin:0;font-size:30px;letter-spacing:.01em}
+.trace-steps{display:grid;grid-template-columns:repeat(5,1fr)}
+.step{padding:22px;border-right:1px solid var(--chalk);position:relative}
+.step:last-child{border-right:none}
+.step .tag{
+  font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:7px;
+}
+.step .who{display:block;font-size:13px;color:var(--ash);margin-bottom:10px;font-family:"Space Mono",monospace}
+.step p{margin:0;font-size:15px;line-height:1.36;color:var(--ink)}
+.dot{width:8px;height:8px;border-radius:999px;display:inline-block}
+.step:nth-child(1) .dot{background:var(--ember)} .step:nth-child(1) .tag{color:var(--ember)}
+.step:nth-child(2) .dot{background:var(--lavender)} .step:nth-child(2) .tag{color:var(--lavender)}
+.step:nth-child(3) .dot{background:var(--denim)} .step:nth-child(3) .tag{color:var(--denim)}
+.step:nth-child(4) .dot{background:var(--harvest)} .step:nth-child(4) .tag{color:#9a7d18}
+.step:nth-child(5) .dot{background:var(--moss)} .step:nth-child(5) .tag{color:var(--moss)}
+.trace-foot{padding:18px 26px;border-top:1px solid var(--chalk);font-size:16px;color:var(--ash)}
+.trace-foot strong{color:var(--ink);font-weight:600}
+
+/* ---- model ---- */
+.model{border-top:1px solid var(--ink);margin-top:10px}
+.model-row{
+  display:grid;grid-template-columns:240px 1fr;gap:48px;
+  padding:26px 0;border-bottom:1px solid var(--chalk);
+}
+.model-label b{
+  display:block;font-family:"Bebas Neue",sans-serif;font-weight:400;
+  color:var(--ink);font-size:30px;line-height:1;letter-spacing:.02em;margin-bottom:6px;
+}
+.model-label{font-family:"Space Mono",monospace;font-size:12px;color:var(--ash);letter-spacing:.06em;text-transform:uppercase}
+.model-desc{color:var(--ash);font-size:19px;line-height:1.36;letter-spacing:-.015em;max-width:760px}
+.model-desc strong{color:var(--ink);font-weight:600}
+.core-cards{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.core-card{border:1px solid var(--chalk);border-radius:14px;padding:18px;background:var(--ground)}
+.core-card h4{margin:0 0 6px;font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:23px;letter-spacing:.02em}
+.core-card .sub{font-family:"Space Mono",monospace;font-size:10px;color:var(--ash);letter-spacing:.1em}
+.core-card p{margin:6px 0 0;color:var(--ash);font-size:15px;line-height:1.38}
+
+/* ---- foundations ---- */
+.foundation-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:10px}
+.foundation{border-top:3px solid var(--ink);padding-top:14px}
+.foundation:nth-child(1){border-color:var(--ember)}
+.foundation:nth-child(2){border-color:var(--denim)}
+.foundation:nth-child(3){border-color:var(--moss)}
+.foundation:nth-child(4){border-color:var(--lavender)}
+.foundation:nth-child(5){border-color:var(--harvest)}
+.foundation h3{margin:0 0 8px;font-size:23px;line-height:1;letter-spacing:.02em}
+.foundation p{margin:0;color:var(--ash);font-size:14px;line-height:1.4}
+
+/* ---- dark notes ---- */
+.note-dark{
+  padding:40px;border-radius:22px;background:var(--ink);color:var(--ground);margin-top:42px;
+}
+.note-dark .label{color:var(--harvest);display:block;margin-bottom:14px}
+.note-dark p{margin:0;font-size:clamp(24px,3.2vw,31px);line-height:1.18;letter-spacing:-.02em;max-width:920px}
+.note-dark span{color:rgba(250,248,243,.6)}
+
+/* ---- honest line ---- */
+.hard{margin-top:48px;border-left:3px solid var(--ember);padding:6px 0 6px 22px}
+.hard .label{color:var(--ember);display:block;margin-bottom:8px}
+.hard p{margin:0;font-size:21px;line-height:1.34;letter-spacing:-.015em;max-width:760px}
+.hard strong{font-weight:600}
+
+/* ---- final ---- */
+.final{padding:90px 0 104px}
+.final p{
+  max-width:980px;margin:0;
+  font-family:"Bebas Neue",sans-serif;font-weight:400;
+  font-size:clamp(48px,8vw,108px);line-height:.9;letter-spacing:.01em;
+}
+.final span{color:var(--ash)}
+
+footer{
+  padding:32px 0 56px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.06em;color:var(--ash);
+}
+
+/* ---- responsive ---- */
+@media(max-width:850px){
+  nav{display:none}
+  .section-head{grid-template-columns:1fr;gap:18px;margin-bottom:30px}
+  .stance{grid-template-columns:1fr}
+  .loop-panel{grid-template-columns:1fr;gap:36px}
+  .loop-stage{margin:0 auto}
+  .trace-steps{grid-template-columns:1fr}
+  .step{border-right:none;border-bottom:1px solid var(--chalk)}
+  .step:last-child{border-bottom:none}
+  .shift-row{grid-template-columns:1fr;gap:6px}
+  .shift-note{margin-top:4px}
+  .model-row{grid-template-columns:1fr;gap:14px}
+  .core-cards{grid-template-columns:1fr}
+  .foundation-grid{grid-template-columns:1fr 1fr}
+  .note-dark{padding:28px}
+}
+@media(max-width:480px){
+  .foundation-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .loop-svg .arc{animation:none;stroke-dashoffset:0}
+  .status-dot{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="logo">THE LIVING ORG</div>
+  <nav>
+    <a href="#concept">Concept</a>
+    <a href="#loops">Loops</a>
+    <a href="#model">Model</a>
+    <a href="#foundations">Foundations</a>
+  </nav>
+  <div class="status"><span class="status-dot"></span><span class="label">Concept · Live</span></div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="meta">
+    <span class="label">Directional concept · June 2026 · Yite Labs</span>
+    <p>A sketch of the org AI is pulling us toward. Not a product. A point of view.</p>
+  </div>
+  <h1>THE<br>LIVING<br>ORG</h1>
+  <p class="hero-spine"><span>Human-powered.</span> <span>AI-accelerated.</span></p>
+  <p class="hero-copy">AI will not just change the work. It will change the loops the company runs on — and the orgs that win will be the ones that stay <strong>fluid</strong> while everyone else keeps rebuilding.</p>
+</section>
+
+<!-- 01 CONCEPT + PRINCIPLE (merged) -->
+<section id="concept">
+  <div class="section-head">
+    <div class="eyebrow">
+      <span class="label">Concept</span>
+      <span class="num">01</span>
+      <span class="name">The shift, and the stance</span>
+    </div>
+    <div>
+      <h2>AI changes the shape of the company, not just the work.</h2>
+      <p class="big-copy">Most AI plans bolt a chatbot onto today's silos and call it transformation. The bigger move is structural: how direction, value, teams and decisions connect. The principle underneath it is simple — <strong>human-powered, AI-accelerated</strong>.</p>
+    </div>
+  </div>
+
+  <div class="stance">
+    <div class="card">
+      <span class="tag-mono">Human-powered</span>
+      <h3>People hold the judgement</h3>
+      <p>Vision, values, trade-offs, taste, trust and accountability stay human. This is what the org is for. AI does not own it.</p>
+    </div>
+    <div class="card">
+      <span class="tag-mono">AI-accelerated</span>
+      <h3>Intelligence carries the load</h3>
+      <p>Models and agents analyse, draft, coordinate and act within rules — so people spend their hours on the work only people can do, and the loop closes faster.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 LOOPS -->
+<section id="loops">
+  <div class="section-head">
+    <div class="eyebrow">
+      <span class="label">Loops</span>
+      <span class="num">02</span>
+      <span class="name">From workflows to operating loops</span>
+    </div>
+    <div>
+      <h2>The company starts to run in loops.</h2>
+      <p class="big-copy">Engineering already works this way: ship, observe, learn, improve. The Living Org takes that logic company-wide. The variable that matters is not how much AI you have. It is <strong>how fast the loop closes without losing judgement</strong>.</p>
+    </div>
+  </div>
+
+  <div class="loop-panel">
+    <div class="loop-stage">
+      <svg class="loop-svg" viewBox="0 0 300 300" aria-hidden="true">
+        <circle class="ring" cx="150" cy="150" r="148"/>
+        <circle class="arc" cx="150" cy="150" r="148"/>
+      </svg>
+      <div class="loop-core">OPERATING<br>LOOPS</div>
+      <div class="loop-node n1">SENSE</div>
+      <div class="loop-node n2">DECIDE</div>
+      <div class="loop-node n3">ACT</div>
+      <div class="loop-node n4">LEARN</div>
+    </div>
+    <div class="loop-copy">
+      <h3>Not human or AI. Human + AI + systems.</h3>
+      <p>Direction needs judgement — AI can simulate and challenge it. Support needs care — AI can carry context and suggest the next action. Engineering needs craft — AI can speed the build, test and review. The shift is the loop itself: people, systems and intelligence learning as they go.</p>
+    </div>
+  </div>
+
+  <!-- THE GROUND-TOUCH: one concrete loop -->
+  <div class="trace">
+    <div class="trace-head">
+      <span class="label">Multi-player mode · one loop traced</span>
+      <h3>A customer hits a bug at 9am.</h3>
+    </div>
+    <div class="trace-steps">
+      <div class="step">
+        <div class="tag"><span class="dot"></span>Sense</div>
+        <span class="who">Support · human</span>
+        <p>Maya takes the ticket. She holds the relationship and reads the real problem under the complaint.</p>
+      </div>
+      <div class="step">
+        <div class="tag"><span class="dot"></span>Decide</div>
+        <span class="who">Agent · within rules</span>
+        <p>An agent pulls the account history, links three similar tickets, and drafts a fix plus a refund inside policy.</p>
+      </div>
+      <div class="step">
+        <div class="tag"><span class="dot"></span>Act</div>
+        <span class="who">Engineering · human</span>
+        <p>Dev reviews the draft, sees the root cause is shared, ships the patch and approves the refund.</p>
+      </div>
+      <div class="step">
+        <div class="tag"><span class="dot"></span>Learn</div>
+        <span class="who">Product · signal</span>
+        <p>The pattern lands as a ranked signal on the roadmap — not a dashboard nobody reads.</p>
+      </div>
+      <div class="step">
+        <div class="tag"><span class="dot"></span>Loop</div>
+        <span class="who">Next case · faster</span>
+        <p>The next customer with this bug is caught before they write in. The loop got tighter.</p>
+      </div>
+    </div>
+    <div class="trace-foot">Five functions, one shared context, one closed loop. <strong>The boundaries between work, teams and systems collapse — and a human still owns every judgement that matters.</strong></div>
+  </div>
+</section>
+
+<!-- 03 MODEL -->
+<section id="model">
+  <div class="section-head">
+    <div class="eyebrow">
+      <span class="label">Model</span>
+      <span class="num">03</span>
+      <span class="name">How the org runs and evolves</span>
+    </div>
+    <div>
+      <h2>The goal is not maximum AI. It is better loops.</h2>
+      <p class="big-copy">Start with direction and value. Then ask how the org should run, evolve, decide and learn now that people, technology and model capacity can work together.</p>
+    </div>
+  </div>
+
+  <div class="model">
+    <div class="model-row">
+      <div class="model-label"><b>Direction</b>Vision · strategy · rules of play</div>
+      <div class="model-desc">Where the org is going, how it behaves, and the boundaries it works within. As execution speeds up, <strong>direction matters more, not less</strong> — it is the thing that keeps fast loops pointed the right way.</div>
+    </div>
+    <div class="model-row">
+      <div class="model-label"><b>Value Creation</b>Products · services · outcomes</div>
+      <div class="model-desc">The org exists to create value customers want. Work, systems, intelligence and capital organise around that — not the other way round.</div>
+    </div>
+    <div class="model-row">
+      <div class="model-label"><b>Operating Core</b>Run it · evolve it</div>
+      <div class="model-desc">Where the org runs what works and builds what's next. Functions stay as homes of expertise and accountability; teams form around the problem and re-form for the next one. Across both, <strong>people and model capacity move together through loops</strong> — that is multi-player mode at the level of the whole org.
+        <div class="core-cards">
+          <div class="core-card"><h4>Run the business <span class="sub">BAU</span></h4><p>Delivery, operations, support, compliance, reporting and core process — held steady, run faster.</p></div>
+          <div class="core-card"><h4>Evolve the business</h4><p>Experiments, automation, product changes, growth bets and transformation — the next loop, in flight.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="model-row">
+      <div class="model-label"><b>Signals &amp; Decisions</b>Sense · decide · act · learn</div>
+      <div class="model-desc">The feedback layer. Some signals inform, some recommend, some route work, some trigger action within defined rules. The org learns faster because <strong>the loop is visible and someone owns it</strong>.</div>
+    </div>
+    <div class="model-row">
+      <div class="model-label"><b>Operating Leverage</b>People · technology · model capacity</div>
+      <div class="model-desc">People bring judgement, trust and accountability. Technology brings reliability and scale. Model capacity brings cognitive reach. The edge is not picking one — it is designing the loop so each does what it is best at.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 FOUNDATIONS (now the moat) -->
+<section id="foundations">
+  <div class="section-head">
+    <div class="eyebrow">
+      <span class="label">Foundations</span>
+      <span class="num">04</span>
+      <span class="name">The enablement layer — and the moat</span>
+    </div>
+    <div>
+      <h2>The foundation creates fluidity, not lock-in.</h2>
+      <p class="big-copy">Models, vendors and best practice will keep changing under you. The lasting advantage is not one tool. It is foundations that let intelligence move safely <strong>while the org stays free to change its mind</strong> — about models, interfaces, use cases and governance.</p>
+    </div>
+  </div>
+
+  <div class="foundation-grid">
+    <div class="foundation"><h3>Integration</h3><p>APIs, MCPs, CLIs and workflow layers as controlled access points between intelligence and your systems.</p></div>
+    <div class="foundation"><h3>Context layer</h3><p>Knowledge, customer history, decisions and policy — retrievable by people and AI alike.</p></div>
+    <div class="foundation"><h3>Identity &amp; permissions</h3><p>What each person and each agent can see, decide and do. Especially each agent.</p></div>
+    <div class="foundation"><h3>Evaluation</h3><p>The hard part. Is the intelligence accurate, useful and safe — and would you know fast when it stops being?</p></div>
+    <div class="foundation"><h3>Optionality</h3><p>Swap models, vendors, interfaces and governance without rebuilding the company underneath.</p></div>
+  </div>
+
+  <div class="hard">
+    <span class="label">The honest part</span>
+    <p>None of this is free. <strong>Someone has to own each loop</strong>, agents that act inside rules will sometimes act on the wrong rule, and weak evaluation hides the failure until it is expensive. The orgs that win treat that as the work, not a footnote.</p>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <p>The advantage is not having AI.<br><span>It is a human-powered org with faster loops — and the freedom to keep changing them.</span></p>
+</section>
+
+</main>
+
+<footer>
+  <div>THE LIVING ORG · CONCEPT</div>
+  <div>YITE LABS · MELBOURNE</div>
+</footer>
+
+</div>
+</body>
+</html>
