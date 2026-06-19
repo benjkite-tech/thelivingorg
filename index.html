@@ -177,6 +177,23 @@ h2{
   text-transform:uppercase;color:var(--ash);
 }
 
+/* ---- why now ---- */
+.whynow{margin-top:42px;border-top:1px solid var(--ink);padding-top:26px}
+.whynow .label{color:var(--ember);display:block;margin-bottom:14px}
+.whynow p{margin:0;font-size:clamp(24px,3.1vw,34px);line-height:1.16;letter-spacing:-.025em;max-width:960px;color:var(--ink)}
+.whynow span{color:var(--ash)}
+
+/* ---- product section ---- */
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:8px}
+.prod-card{border-top:3px solid var(--ink);padding-top:16px}
+.prod-card:nth-child(1){border-color:var(--ember)}
+.prod-card:nth-child(2){border-color:var(--denim)}
+.prod-card:nth-child(3){border-color:var(--moss)}
+.prod-card h3{margin:0 0 8px;font-size:30px;letter-spacing:.01em;line-height:1}
+.prod-card p{margin:0;color:var(--ash);font-size:16px;line-height:1.42}
+.prod-foot{margin-top:28px;border-top:1px solid var(--chalk);padding-top:18px;font-size:18px;color:var(--ash);max-width:840px}
+.prod-foot strong{color:var(--ink);font-weight:600}
+
 /* ---- loop signature ---- */
 .loop-panel{
   display:grid;
@@ -320,6 +337,7 @@ footer{
   .model-row{grid-template-columns:1fr;gap:14px}
   .core-cards{grid-template-columns:1fr}
   .foundation-grid{grid-template-columns:1fr 1fr}
+  .prod-grid{grid-template-columns:1fr}
   .note-dark{padding:28px}
 }
 @media(max-width:480px){
@@ -338,6 +356,7 @@ footer{
   <div class="logo">THE LIVING ORG</div>
   <nav>
     <a href="#concept">Concept</a>
+    <a href="#product">Product</a>
     <a href="#loops">Loops</a>
     <a href="#model">Model</a>
     <a href="#foundations">Foundations</a>
@@ -351,11 +370,11 @@ footer{
 <section class="hero">
   <div class="meta">
     <span class="label">Directional concept · June 2026 · Yite Labs</span>
-    <p>A sketch of the org AI is pulling us toward. Not a product. A point of view.</p>
+    <p>A sketch of the org AI is pulling us toward. Not a pitch. A point of view.</p>
   </div>
   <h1>THE<br>LIVING<br>ORG</h1>
   <p class="hero-spine"><span>Human-powered.</span> <span>AI-accelerated.</span></p>
-  <p class="hero-copy">AI will not just change the work. It will change the loops the company runs on — and the orgs that win will be the ones that stay <strong>fluid</strong> while everyone else keeps rebuilding.</p>
+  <p class="hero-copy">An org exists to create value for customers and keep it. The Living Org does that <strong>continuously</strong> — sensing what customers need, delivering it, and improving without the lag and seams that used to be unavoidable. The way it pulls that off is loops.</p>
 </section>
 
 <!-- 01 CONCEPT + PRINCIPLE (merged) -->
@@ -367,8 +386,8 @@ footer{
       <span class="name">The shift, and the stance</span>
     </div>
     <div>
-      <h2>AI changes the shape of the company, not just the work.</h2>
-      <p class="big-copy">Most AI plans bolt a chatbot onto today's silos and call it transformation. The bigger move is structural: how direction, value, teams and decisions connect. The principle underneath it is simple — <strong>human-powered, AI-accelerated</strong>.</p>
+      <h2>The point was never AI. It was never losing the thread of customer value.</h2>
+      <p class="big-copy">Most orgs leak value at the seams — between teams, between systems, between the moment a customer needs something and the moment anyone acts. Most AI plans bolt a chatbot onto those seams and call it transformation. The bigger move is structural: close the gaps, so value stays continuous. The principle underneath it is simple — <strong>human-powered, AI-accelerated</strong>.</p>
     </div>
   </div>
 
@@ -384,19 +403,57 @@ footer{
       <p>Models and agents analyse, draft, coordinate and act within rules — so people spend their hours on the work only people can do, and the loop closes faster.</p>
     </div>
   </div>
+
+  <div class="whynow">
+    <span class="label">Why now</span>
+    <p>Running on tight loops was always the better shape. It was just too slow and too expensive to do everywhere. <span>The AI age is the first time an org can sense, decide, act and learn at full speed across the whole business — and that new capability is what will divide the winners from everyone still bolting on tools.</span></p>
+  </div>
 </section>
 
 <!-- 02 LOOPS -->
+<!-- 02 PRODUCT -->
+<section id="product">
+  <div class="section-head">
+    <div class="eyebrow">
+      <span class="label">Product</span>
+      <span class="num">02</span>
+      <span class="name">What the org makes</span>
+    </div>
+    <div>
+      <h2>What the org makes stops being static. It starts to live.</h2>
+      <p class="big-copy">Products, services and experiences are the top layer of a living org — the part customers actually touch. In an AI age they stop sitting still between releases. They <strong>sense, adapt and improve while they're being used</strong> — and a human still owns what good looks like.</p>
+    </div>
+  </div>
+
+  <div class="prod-grid">
+    <div class="prod-card">
+      <h3>It senses</h3>
+      <p>Usage, friction, intent and outcome become signals the org can read in the moment — not a report someone opens next quarter.</p>
+    </div>
+    <div class="prod-card">
+      <h3>It adapts</h3>
+      <p>The experience shapes to the person in front of it: their context, their history, what they're trying to get done right now.</p>
+    </div>
+    <div class="prod-card">
+      <h3>It improves</h3>
+      <p>What the org learns from one customer makes it better for the next — inside guardrails a human sets and watches.</p>
+    </div>
+  </div>
+
+  <div class="prod-foot">Static offerings decay between releases. <strong>Living ones compound — every customer makes the next experience better.</strong> Underneath, this is the org running its loops where the customer can feel it.</div>
+</section>
+
+<!-- 03 LOOPS -->
 <section id="loops">
   <div class="section-head">
     <div class="eyebrow">
       <span class="label">Loops</span>
-      <span class="num">02</span>
+      <span class="num">03</span>
       <span class="name">From workflows to operating loops</span>
     </div>
     <div>
-      <h2>The company starts to run in loops.</h2>
-      <p class="big-copy">Engineering already works this way: ship, observe, learn, improve. The Living Org takes that logic company-wide. The variable that matters is not how much AI you have. It is <strong>how fast the loop closes without losing judgement</strong>.</p>
+      <h2>The org starts to run in loops.</h2>
+      <p class="big-copy">Continuous value needs a continuous mechanism. Engineering already has one: ship, observe, learn, improve. The Living Org takes that logic company-wide. The variable that decides who wins is not how much AI you have. It is <strong>how fast the loop closes without losing judgement</strong>.</p>
     </div>
   </div>
 
@@ -460,7 +517,7 @@ footer{
   <div class="section-head">
     <div class="eyebrow">
       <span class="label">Model</span>
-      <span class="num">03</span>
+      <span class="num">04</span>
       <span class="name">How the org runs and evolves</span>
     </div>
     <div>
@@ -473,10 +530,6 @@ footer{
     <div class="model-row">
       <div class="model-label"><b>Direction</b>Vision · strategy · rules of play</div>
       <div class="model-desc">Where the org is going, how it behaves, and the boundaries it works within. As execution speeds up, <strong>direction matters more, not less</strong> — it is the thing that keeps fast loops pointed the right way.</div>
-    </div>
-    <div class="model-row">
-      <div class="model-label"><b>Value Creation</b>Products · services · outcomes</div>
-      <div class="model-desc">The org exists to create value customers want. Work, systems, intelligence and capital organise around that — not the other way round.</div>
     </div>
     <div class="model-row">
       <div class="model-label"><b>Operating Core</b>Run it · evolve it</div>
@@ -493,7 +546,7 @@ footer{
     </div>
     <div class="model-row">
       <div class="model-label"><b>Operating Leverage</b>People · technology · model capacity</div>
-      <div class="model-desc">People bring judgement, trust and accountability. Technology brings reliability and scale. Model capacity brings cognitive reach. The edge is not picking one — it is designing the loop so each does what it is best at.</div>
+      <div class="model-desc">People bring judgement, trust and accountability. Technology brings reliability and scale. Model capacity brings cheap, on-demand thinking. The edge is not picking one — it is designing the loop so each does what it is best at.</div>
     </div>
   </div>
 </section>
@@ -503,7 +556,7 @@ footer{
   <div class="section-head">
     <div class="eyebrow">
       <span class="label">Foundations</span>
-      <span class="num">04</span>
+      <span class="num">05</span>
       <span class="name">The enablement layer — and the moat</span>
     </div>
     <div>
@@ -517,7 +570,7 @@ footer{
     <div class="foundation"><h3>Context layer</h3><p>Knowledge, customer history, decisions and policy — retrievable by people and AI alike.</p></div>
     <div class="foundation"><h3>Identity &amp; permissions</h3><p>What each person and each agent can see, decide and do. Especially each agent.</p></div>
     <div class="foundation"><h3>Evaluation</h3><p>The hard part. Is the intelligence accurate, useful and safe — and would you know fast when it stops being?</p></div>
-    <div class="foundation"><h3>Optionality</h3><p>Swap models, vendors, interfaces and governance without rebuilding the company underneath.</p></div>
+    <div class="foundation"><h3>Optionality</h3><p>Swap models, vendors, interfaces and governance without rebuilding the org underneath.</p></div>
   </div>
 
   <div class="hard">
