@@ -23,7 +23,8 @@
 </style>
 <style>
 :root{
- --ink:#1C0F08;
+ --ink:#3A2A1E;
+ --deep:#2A1D13;
  --ground:#FAF8F3;
  --paper:#FFFDF8;
  --ember:#E8501A;
@@ -103,9 +104,10 @@ nav a:hover{color:var(--ink)}
 .hero .meta p{margin:0;font-size:16px;color:var(--ash);line-height:1.45}
 h1{
  margin:0;
- font-size:clamp(76px,13vw,184px);
- line-height:.82;
- letter-spacing:.005em;
+ font-size:clamp(44px,10.5vw,150px);
+ line-height:.9;
+ letter-spacing:.01em;
+ white-space:nowrap;
 }
 .hero-copy{
  max-width:760px;
@@ -181,12 +183,6 @@ h2{
  text-transform:uppercase;color:var(--ash);
 }
 
-/* ---- why now ---- */
-.whynow{margin-top:42px;border-top:1px solid var(--ink);padding-top:26px}
-.whynow .label{color:var(--ember);display:block;margin-bottom:14px}
-.whynow p{margin:0;font-size:clamp(24px,3.1vw,34px);line-height:1.16;letter-spacing:-.025em;max-width:960px;color:var(--ink)}
-.whynow span{color:var(--ash)}
-
 /* ---- product section ---- */
 .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:8px}
 .prod-card{border-top:3px solid var(--ink);padding-top:16px}
@@ -218,7 +214,7 @@ h2{
 @keyframes trace{to{stroke-dashoffset:0}}
 .loop-core{
  position:absolute;inset:90px;border-radius:999px;
- background:var(--ink);color:var(--ground);
+ background:var(--deep);color:var(--ground);
  display:grid;place-items:center;text-align:center;
  font-family:"Bebas Neue",sans-serif;font-size:20px;line-height:.95;letter-spacing:.03em;
  padding:6px;
@@ -242,6 +238,10 @@ h2{
 .ld{width:10px;height:10px;border-radius:999px;display:inline-block;flex:none}
 .ld.s1{background:var(--ember)} .ld.s2{background:var(--denim)} .ld.s3{background:var(--moss)} .ld.s4{background:var(--lavender)}
 .loop-copy p:not(.loop-intro){margin:0;font-size:20px;line-height:1.34;color:var(--ash);letter-spacing:-.01em}
+.multiplayer{margin-top:42px;border-left:3px solid var(--denim);padding:6px 0 6px 22px}
+.multiplayer .label{color:var(--denim);display:block;margin-bottom:12px}
+.multiplayer p{margin:0;font-size:20px;line-height:1.36;color:var(--ash);letter-spacing:-.015em;max-width:840px}
+.multiplayer strong{color:var(--ink);font-weight:600}
 
 /* ---- concrete trace (the signature ground-touch) ---- */
 .trace{
@@ -280,7 +280,7 @@ h2{
 .om-tag{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
 
 /* loop spine - runs the full height alongside all three layers */
-.om-spine{border:1.5px solid var(--ink);border-radius:16px;background:var(--ink);color:var(--ground);padding:20px 16px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.om-spine{border:1.5px solid var(--deep);border-radius:16px;background:var(--deep);color:var(--ground);padding:20px 16px;display:flex;flex-direction:column;align-items:center;text-align:center}
 .om-spine-tag{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ember);margin-bottom:18px}
 .om-spine-track{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;justify-content:center}
 .om-spine .om-step{font-family:"Bebas Neue",sans-serif;font-size:21px;letter-spacing:.03em;padding:8px 0;width:100%;border-radius:999px;border:1.5px solid var(--ground);background:transparent;color:var(--ground)}
@@ -298,6 +298,7 @@ h2{
 .om-band b{color:var(--ink);font-weight:600}
 .om-band-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
 .om-tempo{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ember)}
+.om-sub{color:var(--ash);text-transform:none;letter-spacing:0}
 .om-body{color:var(--ash);font-size:16px;line-height:1.42;max-width:760px;margin:0}
 .om-body strong{color:var(--ink);font-weight:600}
 .om-direction{border-left:4px solid var(--denim)}
@@ -320,7 +321,7 @@ h2{
 .fork{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
 .fork-col{border-radius:16px;padding:24px;border:1px solid var(--chalk)}
 .fork-col.bolt{background:var(--ground);border-style:dashed}
-.fork-col.embed{background:var(--ink)}
+.fork-col.embed{background:var(--deep)}
 .fork-tag{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:12px}
 .fork-col.bolt .fork-tag{color:var(--ash)}
 .fork-col.embed .fork-tag{color:var(--ember)}
@@ -337,10 +338,30 @@ h2{
 .foundation:nth-child(5){border-color:var(--harvest)}
 .foundation h3{margin:0 0 8px;font-size:23px;line-height:1;letter-spacing:.02em}
 .foundation p{margin:0;color:var(--ash);font-size:14px;line-height:1.4}
+.tooling{display:block;margin-top:10px;font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.06em;color:var(--ash);opacity:.75;line-height:1.5}
+
+/* two-depth foundations */
+.depth{margin-top:14px}
+.depth-head{display:flex;align-items:baseline;gap:14px;margin-bottom:12px}
+.depth-tag{font-family:"Bebas Neue",sans-serif;font-size:26px;letter-spacing:.02em;padding:2px 14px;border-radius:999px;color:var(--ground)}
+.depth-tag.shallow{background:var(--moss)}
+.depth-tag.deep{background:var(--ember)}
+.depth-tag.ops{background:var(--denim)}
+.depth-time{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ash)}
+.depth-intro{margin:0 0 18px;font-size:17px;line-height:1.45;color:var(--ash);max-width:880px}
+.depth-intro em{color:var(--ink);font-style:italic;font-weight:600}
+.foundation-grid.two{margin-top:0}
+.depth + .depth{margin-top:34px}
+
+/* operational foundations placeholder */
+.opsfound{margin-top:40px;border-top:1px solid var(--ink);padding-top:26px}
+.ops-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 24px;margin-top:6px}
+.ops-item b{display:block;font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:21px;letter-spacing:.02em;color:var(--ink);margin-bottom:3px}
+.ops-item span{font-size:14px;line-height:1.4;color:var(--ash)}
 
 /* ---- dark notes ---- */
 .note-dark{
- padding:40px;border-radius:22px;background:var(--ink);color:var(--ground);margin-top:42px;
+ padding:40px;border-radius:22px;background:var(--deep);color:var(--ground);margin-top:42px;
 }
 .note-dark .label{color:var(--harvest);display:block;margin-bottom:14px}
 .note-dark p{margin:0;font-size:clamp(24px,3.2vw,31px);line-height:1.18;letter-spacing:-.02em;max-width:920px}
@@ -382,6 +403,8 @@ footer{
  .model-row{grid-template-columns:1fr;gap:14px}
  .core-cards{grid-template-columns:1fr}
  .foundation-grid{grid-template-columns:1fr 1fr}
+ .foundation-grid.two{grid-template-columns:1fr}
+ .ops-grid{grid-template-columns:1fr 1fr}
  .fork{grid-template-columns:1fr}
  .prod-grid{grid-template-columns:1fr}
  .orgmodel{grid-template-columns:1fr}
@@ -427,9 +450,9 @@ footer{
  <span class="label">Directional concept · June 2026 · Yite Labs</span>
  <p>An aspirational operating model for the AI era.</p>
  </div>
- <h1>THE<br>LIVING<br>ORG</h1>
+ <h1>THE LIVING ORG</h1>
  <p class="hero-spine"><span>Human-powered.</span> <span>AI-accelerated.</span></p>
- <p class="hero-copy">An org exists to create value for customers and keep it - and the Living Org does that <strong>continuously</strong>, sensing what customers need, delivering it, and improving without the lag and seams that used to be unavoidable. <strong>The difference between the orgs that pull this off and the ones that don't is the foundation underneath.</strong></p>
+ <p class="hero-copy">Every org exists to create value for customers and keep it coming. The Living Org does that <strong>without stopping</strong> - watching what people need, delivering it, getting better as it goes, none of the old lag and dropped handoffs. Running this way was always the smart move. The AI age is just the first time it's actually possible at full speed. <strong>What separates the orgs that pull it off from the ones that don't is the foundation underneath.</strong></p>
 </section>
 
 <!-- 01 CONCEPT + PRINCIPLE (merged) -->
@@ -438,11 +461,11 @@ footer{
  <div class="eyebrow">
  <span class="label">Concept</span>
  <span class="num">01</span>
- <span class="name">The shift, and the stance</span>
+ <span class="name">The shift in org models</span>
  </div>
  <div>
  <h2 class="h2-long">Your customer doesn't care that you have AI. They care about what they get and how it makes them feel.</h2>
- <p class="big-copy">Most orgs leak value at the seams - between teams, between systems, between the moment a customer needs something and the moment anyone acts. Most AI plans bolt a chatbot onto those seams and call it transformation. The bigger move is structural: close the gaps, so value stays continuous. The principle underneath it is simple - <strong>human-powered, AI-accelerated</strong>.</p>
+ <p class="big-copy">Most orgs leak value at the seams - between teams, between systems, between the moment a customer needs something and the moment anyone actually does it. Most AI plans bolt a chatbot over the cracks and call it transformation. That's not it. The move is to close the gaps so the value never stops coming. <strong>Human-powered, AI-accelerated.</strong></p>
  </div>
  </div>
 
@@ -458,11 +481,6 @@ footer{
  <p>Models and agents analyse, draft, coordinate and act within rules - so people spend their hours on the work only people can do, and the loop closes faster.</p>
  </div>
  </div>
-
- <div class="whynow">
- <span class="label">Why now</span>
- <p>Sensing what's happening and responding right then was always the better way to run. It was just too slow and too expensive to do everywhere. <span>The AI age is the first time an org can do it at full speed across the whole business. What decides whether you can is the foundation you build to carry it.</span></p>
- </div>
 </section>
 
 <!-- 02 LOOPS -->
@@ -476,22 +494,22 @@ footer{
  </div>
  <div>
  <h2>What you make stops sitting still. It starts to live.</h2>
- <p class="big-copy">Products, services and experiences are the top layer of a living org - the part customers actually touch. In an AI age they stop sitting still between releases. They <strong>sense, adapt and improve while they're being used</strong> - and a human still owns what good looks like.</p>
+ <p class="big-copy">Whatever you sell - software, a service, a product, an experience - it's the part customers actually touch. It used to change only when you decided to update it. Now it <strong>keeps getting better while it's being used</strong> - and the customer feels it. How that works is the next section. What it gets you is here.</p>
  </div>
  </div>
 
  <div class="prod-grid">
  <div class="prod-card">
- <h3>It senses</h3>
- <p>Usage, friction, intent and outcome become signals the org can read in the moment - not a report someone opens next quarter.</p>
+ <h3>Never stale</h3>
+ <p>It doesn't wait for a big relaunch to get better. What a customer meets today is sharper than last month's - a tighter mortgage approval, a smarter support call, a cleaner checkout.</p>
  </div>
  <div class="prod-card">
- <h3>It adapts</h3>
- <p>The experience shapes to the person in front of it: their context, their history, what they're trying to get done right now.</p>
+ <h3>Fits the person</h3>
+ <p>It shapes to whoever's in front of it - their situation, their history, what they need right now. Not one rigid process everyone is forced through.</p>
  </div>
  <div class="prod-card">
- <h3>It improves</h3>
- <p>What the org learns from one customer makes it better for the next - inside guardrails a human sets and watches.</p>
+ <h3>Better with use</h3>
+ <p>What it learns from one customer makes it better for the next. The more it's used, the more it's worth - inside limits a human sets.</p>
  </div>
  </div>
 
@@ -508,7 +526,7 @@ footer{
  </div>
  <div>
  <h2>The org starts to run in loops.</h2>
- <p class="big-copy">A loop is real-time: information, decisions and actions move together, connected, instead of queuing in handoffs and waiting on the next meeting. Engineering has worked this way for years - ship, observe, learn, improve. <strong>AI is what lets the rest of the org run the same way</strong>, at speed, without a person stitching every step by hand. The variable that decides who wins is how fast the loop closes without losing judgement.</p>
+ <p class="big-copy">A loop is real-time: information, decisions and actions move together instead of queuing in handoffs and waiting on the next meeting. Engineering has run this way for years - ship, watch, learn, fix. <strong>AI is what finally lets the rest of the org run the same way</strong>, at speed, without someone hand-stitching every step. Who wins comes down to one thing: how fast the loop closes without losing judgement.</p>
  </div>
  </div>
 
@@ -519,21 +537,26 @@ footer{
  <circle class="arc" cx="150" cy="150" r="148"/>
  </svg>
  <div class="loop-core">OPERATING<br>LOOPS</div>
- <div class="loop-node n1">SENSE</div>
+ <div class="loop-node n1">MONITOR</div>
  <div class="loop-node n2">DECIDE</div>
  <div class="loop-node n3">ACT</div>
  <div class="loop-node n4">LEARN</div>
  </div>
  <div class="loop-copy">
- <h3>Sense. Decide. Act. Learn.</h3>
+ <h3>Monitor. Decide. Act. Learn.</h3>
  <p class="loop-intro">Four moves, running continuously. Each one is human, AI, or both - the loop is the thing, not who does which part.</p>
  <dl class="loop-defs">
- <div><dt><span class="ld s1"></span>Sense</dt><dd>Pick up what's happening - a customer signal, a number moving, a request - the moment it happens, not next quarter.</dd></div>
+ <div><dt><span class="ld s1"></span>Monitor</dt><dd>Watch what's happening - a customer signal, a number moving, a request - and pick it up the moment it happens, not next quarter.</dd></div>
  <div><dt><span class="ld s2"></span>Decide</dt><dd>Work out the call. AI weighs the options and recommends; a human sets the rules and owns the ones that matter.</dd></div>
  <div><dt><span class="ld s3"></span>Act</dt><dd>Do it in the real systems - ship the change, send the reply, run the process. Not a note for someone to action later.</dd></div>
  <div><dt><span class="ld s4"></span>Learn</dt><dd>Feed the result back in, so the next turn of the loop is sharper. This is the part most orgs skip.</dd></div>
  </dl>
  </div>
+ </div>
+
+ <div class="multiplayer">
+ <span class="label">Multi-player mode</span>
+ <p>Run loops across the whole org and something shifts. The silos thin out. Teams, functions and tools stop handing work down a relay and start working off the same live state - the way a shared doc or a game lobby works, not the way email works. <strong>Single-player AI is everyone with their own chatbot in their own corner. Multi-player is the whole org connected and moving together.</strong> It's how the best tools already feel - and it's the version worth building for. It's also why agents need to identify each other now - the A2A protocol and agent cards exist for exactly this.</p>
  </div>
 
  <!-- THE GROUND-TOUCH: one concrete loop -->
@@ -544,7 +567,7 @@ footer{
  </div>
  <div class="trace-steps">
  <div class="step">
- <div class="tag"><span class="dot"></span>Sense</div>
+ <div class="tag"><span class="dot"></span>Monitor</div>
  <span class="who">Support · human</span>
  <p>Maya takes the ticket. She holds the relationship and reads the real problem under the complaint.</p>
  </div>
@@ -583,7 +606,7 @@ footer{
  </div>
  <div>
  <h2>Same parts as any org. The loop is what's new.</h2>
- <p class="big-copy">Direction on top, leverage underneath, the work in the middle - that structure is old. What changes is that the loop from section three now runs <strong>through all of it</strong>, in real time. The number to watch is loop latency: how long a signal takes to become an action.</p>
+ <p class="big-copy">Direction on top, leverage underneath, the work in the middle - that part's as old as business. What's new: the loop from section three runs <strong>through all of it</strong>, live. One number tells you if it's working - how long a signal takes to become an action. Most orgs have never measured it. It's usually weeks.</p>
  </div>
  </div>
 
@@ -592,7 +615,7 @@ footer{
  <div class="om-spine">
  <span class="om-spine-tag">The loop</span>
  <div class="om-spine-track">
- <span class="om-step s1">Sense</span>
+ <span class="om-step s1">Monitor</span>
  <span class="om-spine-arr">↓</span>
  <span class="om-step s2">Decide</span>
  <span class="om-spine-arr">↓</span>
@@ -606,12 +629,12 @@ footer{
 
  <div class="om-layers">
  <div class="om-band om-direction">
- <div class="om-band-head"><div class="om-tag">Direction</div><span class="om-tempo">loops slowly</span></div>
- <div class="om-body"><b>Vision · strategy · rules of play.</b> Where the org is going and the boundaries it works within. It senses whether the strategy still holds, and resets the rules when it doesn't. It sets the line of judgement - which calls stay human - and <strong>raises that line as trust is earned</strong>.</div>
+ <div class="om-band-head"><div class="om-tag">Direction <span class="om-sub">where we're going</span></div><span class="om-tempo">loops slowly</span></div>
+ <div class="om-body"><b>Vision · strategy · rules of play.</b> Where the org is going and the boundaries it works within. It monitors whether the strategy still holds, and resets the rules when it doesn't. It sets the line of judgement - which calls stay human - and <strong>raises that line as trust is earned</strong>.</div>
  </div>
 
  <div class="om-band om-core">
- <div class="om-band-head"><div class="om-tag">Operating Core</div><span class="om-tempo">loops fast</span></div>
+ <div class="om-band-head"><div class="om-tag">Operating Core <span class="om-sub">what we do</span></div><span class="om-tempo">loops fast</span></div>
  <span class="om-note">Functions hold expertise and accountability · teams form around the problem</span>
  <div class="om-core-inner">
  <div class="om-half">
@@ -627,7 +650,7 @@ footer{
  </div>
 
  <div class="om-band om-leverage">
- <div class="om-band-head"><div class="om-tag">Operating Leverage</div><span class="om-tempo">shifts as it goes</span></div>
+ <div class="om-band-head"><div class="om-tag">Operating Leverage <span class="om-sub">who does it</span></div><span class="om-tempo">shifts as it goes</span></div>
  <div class="om-lev-grid">
  <div><b>People</b><span>judgement, trust, accountability</span></div>
  <div><b>Technology</b><span>reliability and scale</span></div>
@@ -666,25 +689,45 @@ footer{
  </div>
  </div>
 
- <p class="fork-lead">The foundation is what separates the two. Five things make it:</p>
+ <p class="fork-lead">The foundation comes in two depths. Both matter. Most orgs do the first and stop.</p>
 
- <div class="foundation-grid">
- <div class="foundation"><h3>Integration</h3><p>APIs, MCPs, CLIs and workflow layers as controlled access points between intelligence and your systems.</p></div>
- <div class="foundation"><h3>Context layer</h3><p>Data, knowledge, customer history, decisions and policy - retrievable by people and AI alike. Reporting stops being a rear-view dashboard and becomes something the loop reads live.</p></div>
- <div class="foundation"><h3>Identity &amp; permissions</h3><p>What each person and each agent can see, decide and do. Especially each agent.</p></div>
- <div class="foundation"><h3>Evaluation</h3><p>The hard part. Is the intelligence accurate, useful and safe - and would you know fast when it stops being?</p></div>
- <div class="foundation"><h3>Optionality</h3><p>Swap models, vendors, interfaces and governance without rebuilding the org underneath.</p></div>
+ <div class="depth">
+ <div class="depth-head"><span class="depth-tag shallow">Quick wins</span><span class="depth-time">days to weeks</span></div>
+ <p class="depth-intro">Point-to-point intelligence. Wire a few tools together and collapse a workflow fast. An MCP between Omni, Claude and Slack with basic approvals already does real work. Start here - it's how you prove it and build the appetite.</p>
+ <div class="foundation-grid two">
+ <div class="foundation"><h3>Integration</h3><p>MCPs, APIs, CLIs and workflow layers as controlled access points. <strong>MCP lets tools talk to models without hand-wiring each one</strong> - and now requires OAuth 2.1 for remote servers, so access is scoped from the start. This is the fast lane.</p><span class="tooling">e.g. MCP servers (OAuth 2.1) · API gateways · n8n, Zapier</span></div>
+ <div class="foundation"><h3>Optionality</h3><p>Swap models and vendors without ripping anything out. Cheap insurance, worth buying early before you're locked in.</p><span class="tooling">e.g. model routers · LiteLLM, OpenRouter</span></div>
+ </div>
+ </div>
+
+ <div class="depth">
+ <div class="depth-head"><span class="depth-tag deep">The deep layer</span><span class="depth-time">months · the moat</span></div>
+ <p class="depth-intro">Where it stops being a clever integration and becomes an org that thinks. A semantic layer so intelligence can reason across the <em>whole</em> business - every project, product, customer and decision in one coherent place - not just inside one wired-up workflow. <strong>This is what makes multi-player mode possible</strong> - single-player AI runs on nothing, but a whole org working off shared live state needs this underneath. It's the hard, slow, expensive part. It's also the part nobody can copy.</p>
+ <div class="foundation-grid two">
+ <div class="foundation"><h3>Semantic layer</h3><p><strong>How the business connects.</strong> One shared definition of what "customer", "revenue" or "active" actually mean, and how every project, product and team relate. Without it, each team's AI quietly uses different definitions and reasons wrong. This is the real architecture - and the moat.</p><span class="tooling">e.g. metric/semantic layers · knowledge graphs · unified data model</span></div>
+ <div class="foundation"><h3>Context layer</h3><p><strong>What the business knows.</strong> The raw material - customer history, decisions, policy, the records AI needs to pull from. The hard part isn't retrieval, it's <strong>governed retrieval</strong>: returning what someone is allowed to see, not just what matches. Skip that and agents quietly surface board minutes and salary data.</p><span class="tooling">e.g. context engineering · RAG · vector stores · pgvector, Pinecone</span></div>
+ <div class="foundation"><h3>Identity &amp; permissions</h3><p>Authenticating an agent is now largely a solved problem - Entra Agent ID, Google Agent Identity, SPIFFE and OAuth 2.1 all ship it. <strong>What isn't solved is authorization</strong>: scoping what an agent can actually do, and proving who authorised what when one agent hands off to another. Most agents today are wildly over-permissioned.</p><span class="tooling">e.g. Entra Agent ID, Google Agent Identity · SPIFFE, OAuth 2.1 · scoped authz (unsolved)</span></div>
+ <div class="foundation"><h3>Evaluation</h3><p>Still the hard part, though the tooling's catching up fast. Is the intelligence right, useful and safe - and would you know fast when it stops being? Skimp here and you find out late.</p><span class="tooling">e.g. Langfuse, Braintrust · eval harnesses</span></div>
+ </div>
+ </div>
+
+ <div class="opsfound">
+ <div class="depth-head"><span class="depth-tag ops">And the human side</span><span class="depth-time">a whole series of its own</span></div>
+ <p class="depth-intro">All of the above is plumbing. None of it lands without the operational shift - and that's the harder half. We'll go deep on these in their own right. The short version:</p>
+ <div class="ops-grid">
+ <div class="ops-item"><b>Loop ownership</b><span>Someone owns each loop end to end. No owner, no loop.</span></div>
+ <div class="ops-item"><b>Decision rights</b><span>What a human signs off, what an agent just does, and where the line sits.</span></div>
+ <div class="ops-item"><b>Operating rhythm</b><span>The cadences that keep fast loops pointed the right way.</span></div>
+ <div class="ops-item"><b>Skills &amp; roles</b><span>What people do when the grunt work is gone. Mostly judgement and taste.</span></div>
+ <div class="ops-item"><b>Budgets &amp; teams</b><span>Funding fluid teams when the org chart still owns the money.</span></div>
+ <div class="ops-item"><b>Trust &amp; change</b><span>Getting people to hand work to a machine without losing the room.</span></div>
+ </div>
  </div>
 
  <div class="hard">
  <span class="label">The honest part</span>
- <p>None of this is free. The moment intelligence can act on its own, someone has to own what it does - and notice fast when it gets something wrong. <strong>The orgs that win build that in from the start.</strong> The ones that bolt it on find out the expensive way.</p>
+ <p>None of this is free, and none of it is instant. The first loop is hard - it usually exposes how broken your data and handoffs already were, and "real-time" is a direction you move toward, not a switch you flip. The moment intelligence can act on its own, someone has to own what it does and notice fast when it gets something wrong. <strong>The orgs that win build for all of this from the start.</strong> The ones that bolt it on find out the expensive way.</p>
  </div>
-</section>
-
-<!-- FINAL -->
-<section class="final">
- <p>The advantage is not having AI.<br><span>It is a human-powered org with faster loops - and the freedom to keep changing them.</span></p>
 </section>
 
 </main>
