@@ -191,6 +191,10 @@ h2{
 }
 .beat.ember{color:var(--ember)}
 .beat-sub{max-width:720px;margin:34px 0;font-size:clamp(20px,2.3vw,25px);line-height:1.36;letter-spacing:-.015em;color:var(--ink)}
+.build-beat{margin-top:48px;border-top:1px solid var(--chalk);padding-top:30px;max-width:760px}
+.build-beat h3{margin:0 0 14px;font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(30px,4vw,44px);line-height:1;letter-spacing:.01em;color:var(--ink)}
+.build-beat p{margin:0 0 14px;font-size:18px;line-height:1.5;color:var(--ash)}
+.build-beat p:last-child{margin-bottom:0}
 
 /* ---- principle row (merged human stance) ---- */
 .stance{
@@ -367,6 +371,7 @@ h2{
 .foundation h3{margin:0 0 8px;font-size:21px;line-height:1.05;letter-spacing:.02em}
 .foundation p{margin:0;color:var(--ash);font-size:14px;line-height:1.5}
 .tooling{display:block;margin-top:12px;font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.06em;color:var(--ash);opacity:.6;line-height:1.5}
+.found-extra{margin-top:12px !important;font-size:13px !important;color:var(--ash) !important;line-height:1.5 !important}
 
 /* two-depth foundations */
 .depth{margin-top:20px}
@@ -399,7 +404,10 @@ h2{
 /* ---- honest line ---- */
 .hard{margin-top:48px;border-left:3px solid var(--ember);padding:6px 0 6px 22px}
 .hard .label{color:var(--ember);display:block;margin-bottom:8px}
-.hard p{margin:0;font-size:21px;line-height:1.34;letter-spacing:-.015em;max-width:760px}
+.hard p{margin:0 0 14px;font-size:21px;line-height:1.34;letter-spacing:-.015em;max-width:760px;color:var(--ash)}
+.hard p:last-child{margin-bottom:0}
+.hard p strong{color:var(--ink)}
+.hard-close{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(24px,3vw,34px) !important;letter-spacing:.01em;color:var(--ink) !important;margin-top:20px !important;line-height:1.05 !important}
 .hard strong{font-weight:600}
 
 /* ---- final ---- */
@@ -479,9 +487,10 @@ footer{
  </div>
  <h1>THE CONTINUOUS ORG</h1>
  <p class="hero-spine"><span>Human-powered.</span> <span>AI-accelerated.</span></p>
- <p class="hero-copy"><strong>AI will not just change the work. It will change the loops the company runs on.</strong></p>
- <p class="hero-copy">The advantage goes to orgs that connect their systems, understand their context, and can act across platforms safely. Boundaries blur, work runs around the clock, and outcomes compound on more data and context. The Continuous Org is a human-powered, AI-accelerated operating model for that shift: people, tools and agents working together through loops that monitor, decide, act and learn.</p>
- <p class="hero-copy">When intelligence becomes cheap and action can happen across systems, the bottleneck moves from execution to context, coordination and control.</p>
+ <p class="hero-copy"><strong>AI will not just change the work. It will change how organisations build, deliver and operate.</strong></p>
+ <p class="hero-copy">The advantage goes to organisations that connect their systems, understand their context, and can act across platforms safely.</p>
+ <p class="hero-copy">The Continuous Org is a human-powered, AI-accelerated operating model for that shift: people, technology and agents working together through loops that monitor, decide, act and learn.</p>
+ <p class="hero-copy">Where you start and how fast depends on what you are. A software company can rewire in months. A business built on physical products, stores and decades of systems moves differently - same direction, different pace and entry point.</p>
 </section>
 
 <!-- 01 CONCEPT + PRINCIPLE (merged) -->
@@ -493,8 +502,8 @@ footer{
  <span class="name">The shift in org models</span>
  </div>
  <div>
- <h2 class="h2-long">It runs on humans and intelligence working together.</h2>
- <p class="big-copy">The Continuous Org is not human or AI. It's human + AI + systems. People hold judgement, trust and accountability. AI carries cognitive load. Systems let intelligence move through the company safely.</p>
+ <h2 class="h2-long">It runs on people, technology and agents working together.</h2>
+ <p class="big-copy">The Continuous Org is not human or AI. It's people, technology and agents in the same loop. People bring judgement, trust and accountability. Technology provides the systems, workflows and solutions where work gets done. Agents bring cognitive capacity, automation and coordination across the loop.</p>
  </div>
  </div>
 
@@ -507,8 +516,14 @@ footer{
  <div class="card">
  <span class="tag-mono">AI-accelerated</span>
  <h3>AI carries the load - and breaks the ceiling</h3>
- <p>It can draft, analyse, decide and act within rules. It can work every signal at once, in real time, at a scale and speed no team can match. The good version doesn't make people smaller. It gives them more room for judgement, creativity and care.</p>
+ <p>It can analyse, draft, classify, coordinate, recommend and act within rules. It can work every signal at once, in real time, at a scale and speed no team can match. The good version doesn't make people smaller. It gives them more room for judgement, creativity and care.</p>
  </div>
+ </div>
+
+ <div class="build-beat">
+ <h3>What you build changes too.</h3>
+ <p>Agents are here and growing - not everywhere, not yet, but the direction is set. However customers reach you - app, API, phone line, booking system - there's increasingly an agent on the other end, acting for them. So the thing you expose has to be legible to machines, not just people: structured, queryable, safe to act on.</p>
+ <p>For digital products that means headless and API-first. For everyone else it's the front door - the booking, the quote, the account - rebuilt so an agent can use it as easily as a person.</p>
  </div>
 </section>
 
@@ -521,10 +536,9 @@ footer{
  <span class="name">The AI operating model</span>
  </div>
  <div>
- <h2>The structure holds. Now it moves.</h2>
- <p class="big-copy">Direction, leverage and work are as old as business. What changes is the motion: a live loop running through the company. Monitor, decide, act, learn, over and over, with each step handled by a human, AI, technology, or some mix of all three.</p>
+ <h2>The old model stays. The motion changes.</h2>
+ <p class="big-copy">Direction, leverage and work are as old as business. What changes is the motion: a live loop running through the company. Monitor, decide, act, learn, over and over, with each step handled by a person, technology, agent, or some mix of all three.</p>
  <p class="big-copy">Engineering teams have run this way for years - ship, watch, learn, fix. What's changing is the loop goes cross-org. The same pattern now runs through support, finance, ops, product - not just the codebase.</p>
- <p class="big-copy">You can already see the early pieces: AI takes the notes, drafts the reply, prepares the code change, pulls a project update together from scattered threads. Useful on their own. The shift is when these stop being one-off favours and start closing loops.</p>
  </div>
  </div>
 
@@ -532,7 +546,7 @@ footer{
  <div><dt><span class="ld s1"></span>Monitor</dt><dd>Watch what's happening - a customer signal, a number moving, a request - and pick it up the moment it happens, not next quarter.</dd></div>
  <div><dt><span class="ld s2"></span>Decide</dt><dd>Work out the call. AI weighs the options and recommends; a human sets the rules and owns the ones that matter.</dd></div>
  <div><dt><span class="ld s3"></span>Act</dt><dd>Do it in the real systems - ship the change, send the reply, run the process. Not a note for someone to action later.</dd></div>
- <div><dt><span class="ld s4"></span>Learn</dt><dd>Feed the result back in, so the next turn of the loop is sharper. This is the part most orgs skip.</dd></div>
+ <div><dt><span class="ld s4"></span>Learn</dt><dd>Feed the result back in, so the next turn is sharper. This only works if you've defined what "good" looks like and can measure against it - that's evals, and it's the part most orgs skip.</dd></div>
  </dl>
 
  <!-- visual model -->
@@ -563,11 +577,11 @@ footer{
  <span class="om-note">Functions hold expertise and accountability · teams form around the problem</span>
  <div class="om-core-inner">
  <div class="om-half">
- <h4>Run the business <span>BAU</span></h4>
+ <h4>Run what exists</h4>
  <p>Delivery, ops, support, compliance - held steady, run faster.</p>
  </div>
  <div class="om-half">
- <h4>Evolve the business</h4>
+ <h4>Evolve what's next</h4>
  <p>Experiments, product changes, growth bets - the next loop, in flight.</p>
  </div>
  </div>
@@ -578,10 +592,11 @@ footer{
  <div class="om-band-head"><div class="om-tag">Operating Leverage <span class="om-sub">who does it</span></div><span class="om-tempo">shifts as it goes</span></div>
  <div class="om-lev-grid">
  <div><b>People</b><span>judgement, trust, accountability</span></div>
- <div><b>Technology</b><span>reliability and scale</span></div>
- <div><b>Tokens</b><span>thinking, generation and decisions on demand</span></div>
+ <div><b>Technology</b><span>systems, workflows, scale</span></div>
+ <div><b>Agents</b><span>cognitive capacity, automation, coordination</span></div>
  </div>
- <p class="om-body">Who does the work is not fixed. People bring judgement, trust and accountability. Technology brings reliability and scale. Tokens bring cognitive capacity. The loop shifts the mix as the work changes, with humans setting the judgement line.</p>
+ <p class="om-body">Who does the work is not fixed. People bring judgement, trust and accountability. Technology provides the systems, workflows and scale. Agents bring cognitive capacity, automation and coordination. The loop shifts the mix as the work changes, with people setting the judgement line.</p>
+ <p class="om-body">Each has a different cost model: people are wage-based, technology is infrastructure and software-based, agents are usage-based.</p>
  </div>
  </div>
  </div>
@@ -601,7 +616,7 @@ footer{
  <div class="step"><div class="tag"><span class="dot"></span>9:30</div><span class="who">Product · signal</span><p>The pattern lands as a ranked signal on the roadmap - live, not a report read three weeks later.</p></div>
  <div class="step"><div class="tag"><span class="dot"></span>next</div><span class="who">Next case · faster</span><p>The next customer with this bug is caught before they even write in.</p></div>
  </div>
- <div class="trace-foot">Five functions, one shared context, half an hour. No dropped handoffs, no three-week dashboard, a human on every call that mattered. <strong>That's the model running. The rest is just the names for it.</strong></div>
+ <div class="trace-foot">Five functions. One shared context. Half an hour. No dropped handoffs, no stale reporting pack, a human on every call that mattered. <strong>That's the model running. The rest is just the names for it.</strong></div>
  </div>
 
  <p class="beat-sub">Once loops run across the whole org, two things emerge.</p>
@@ -616,8 +631,6 @@ footer{
  <span class="label">Two · agents working with agents</span>
  <p>Inside the org, agents hand work to other agents - support to billing to fulfilment, no human in the relay. Outside it, your customer's agent deals with yours: your storefront becomes something other agents negotiate with. <strong>You can't safely expose that without the deep foundation underneath</strong> - and the orgs without it get locked out of the market, not just slowed down. This only works if identity, authority, permissions, transaction limits and audit are designed upfront.</p>
  </div>
-
- <div class="om-onramp callout"><b>Start with one loop.</b> Pick a slow handoff, a repeated decision, or a signal nobody acts on. Close it end to end. One real loop teaches you more than any roadmap, and the next one is easier.</div>
 </section>
 
 <!-- 04 FOUNDATIONS (now the moat) -->
@@ -651,9 +664,9 @@ footer{
  <div class="depth-head"><span class="depth-tag shallow">Horizontal · the baseline</span><span class="depth-time">days to weeks · broad, shallow</span></div>
  <p class="depth-intro">Go wide first. Connect AI across as many places as you can - wire a few tools together, collapse a workflow. Linking your data tool, an AI model and your chat app with basic approvals already does real work. Table stakes now, and most orgs can be here in weeks. It's how you prove it and build the appetite.</p>
  <div class="foundation-grid two">
- <div class="foundation"><h3>Integration</h3><p>The wiring that lets models reach your tools and data. <strong>MCP is one emerging standard</strong> for connecting models to tools and data: connect a tool once, then let approved models use it without rebuilding the integration each time.</p><span class="tooling">e.g. MCP servers · API gateways · n8n, Zapier</span></div>
- <div class="foundation"><h3>Retrieval</h3><p>Giving the model the right facts at the right moment - pulling from your documents, records and history so it answers from <strong>your</strong> reality, not a guess. Basic version is quick. Doing it so it only surfaces what someone's allowed to see is the deep layer.</p><span class="tooling">e.g. RAG · vector search · pgvector, Pinecone</span></div>
- <div class="foundation"><h3>Optionality</h3><p>Swap models and vendors without ripping anything out. Cheap insurance, worth buying early before you're locked in.</p><span class="tooling">e.g. model routers · LiteLLM, OpenRouter</span></div>
+ <div class="foundation"><h3>Integration</h3><p>Models and agents need controlled ways to reach the systems where work happens. APIs, workflow layers and emerging protocols like MCP can act as access points between AI and business systems - but they still need governance around identity, permissions, tool use and audit.</p><span class="tooling">e.g. APIs · MCP servers · workflow orchestration · integration layers</span></div>
+ <div class="foundation"><h3>Retrieval</h3><p>Get the right facts in front of the model at the right moment, so it answers from <strong>your</strong> reality, not a guess. Quick to stand up in basic form - the deeper, permission-aware version is the context layer.</p><span class="tooling">e.g. retrieval, vector search, knowledge stores</span></div>
+ <div class="foundation"><h3>Optionality</h3><p>The foundation should preserve choice. Models, vendors, interfaces and governance will keep changing - the goal is to avoid being trapped in one model, one tool, or one workflow pattern.</p><p class="found-extra">Most loops won't need a custom model - just the right context, tools, permissions and evaluation around strong frontier models. But some become valuable, specific or repeated enough to justify going deeper: fine-tuning, or custom models built around proprietary data. That's where the foundation starts to become advantage.</p><span class="tooling">e.g. model routers · tools such as LiteLLM, OpenRouter</span></div>
  </div>
  </div>
 
@@ -662,20 +675,25 @@ footer{
  <p class="depth-intro">Then go deep. This is where it stops being a clever integration and becomes a company that can reason across its own context. Shared definitions, governed access, identity, evaluation and operating rhythm make the advantage harder to copy. <strong>It's also what makes multi-player mode possible</strong>: single-player AI needs little underneath it, but a whole org working off shared live state needs this. Slow, expensive, and the part nobody can copy.</p>
  <div class="foundation-grid two">
  <div class="foundation"><h3>Semantic layer</h3><p><strong>How the business connects.</strong> One shared definition of what "customer", "revenue" or "active" actually mean, and how every project, product and team relate. Without it, each team's AI quietly uses different definitions and reasons wrong. This is the real architecture - and the moat.</p><span class="tooling">e.g. metric/semantic layers · knowledge graphs · unified data model</span></div>
- <div class="foundation"><h3>Context layer</h3><p>Knowledge, customer history, decisions, policies and process context - retrievable by people and AI, with permissions attached. Basic retrieval is easy. Context that's useful, current and safe is the deeper layer.</p><span class="tooling">e.g. context engineering · access-aware retrieval · policy layers</span></div>
- <div class="foundation"><h3>Identity, permissions &amp; authority</h3><p>Knowing who an agent is matters. Knowing <strong>what it's allowed to do</strong> matters more. Can this agent issue a refund? Move money? Update a record? Up to what limit, on whose authority, and with what audit trail?</p><span class="tooling">e.g. Entra Agent ID, Google Agent Identity · scoped permissions</span></div>
- <div class="foundation"><h3>Evaluation &amp; observability</h3><p>How you know the AI is useful, safe and improving - and how you catch issues when behaviour changes. Without evals, traces and monitoring, the output looks confident whether it's right or wrong. <strong>The teams that trust agents with real work are the ones measuring them constantly.</strong></p><span class="tooling">e.g. Langfuse, Braintrust · eval harnesses</span></div>
+ <div class="foundation"><h3>Context layer</h3><p>Basic retrieval is easy. Useful context is harder. The company needs reliable ways to surface customer history, policies, decisions, definitions, process context and current state - with permissions attached.</p><span class="tooling">e.g. knowledge stores · semantic layers · access-aware retrieval</span></div>
+ <div class="foundation"><h3>Identity, permissions &amp; authority</h3><p>Knowing who an agent is matters. Knowing <strong>what it's allowed to do</strong> matters more. Can this agent view a customer record, issue a refund, update a workflow or move money? Up to what limit, on whose authority, and with what audit trail?</p><span class="tooling">e.g. agent identity · scoped permissions · audit trails</span></div>
+ <div class="foundation"><h3>Evaluation &amp; observability</h3><p>You can only improve what you can measure - and AI performance is largely defined by how well you've defined "good". Evals turn that into a discipline: rubrics, traces, monitoring and incident review, not just confident-looking outputs. <strong>The teams shipping real agentic work treat evals as core IP, not a pre-launch check.</strong></p><span class="tooling">e.g. rubrics · traces · eval datasets · production monitoring</span></div>
  </div>
  </div>
 
  <div class="opsfound">
  <div class="depth-head"><span class="depth-tag ops">The human side is the harder half</span><span class="depth-time">the operating system</span></div>
- <p class="depth-intro">All of this is plumbing. None of it lands without the human operating system: loop ownership, decision rights, trust, adoption, incentives, new skills, operating rhythm, and how budgets and teams flex. The technical foundation makes the loops possible. The human system makes them work.</p>
+ <p class="depth-intro">The hard part is not the plumbing. It's changing how people work.</p>
+ <p class="depth-intro">Every loop needs an owner, every agent needs boundaries, and every decision needs a clear handoff between human judgement and automation. But the real test is whether the change feels better to the people inside it.</p>
+ <p class="depth-intro">Change works when people can see the upside: less admin, fewer dead handoffs, better information, faster decisions, and more time on the work that actually needs them. If AI helps people do cooler, higher-value things, happy days. If it just moves the same magnets around the same board, or brings fear without upside, good luck.</p>
+ <p class="depth-intro">The technical foundation makes the loops possible. The human system decides whether they actually run and stick.</p>
  </div>
 
  <div class="hard">
- <span class="label">The honest part</span>
- <p>Nobody knows the exact shape this takes. The destination keeps moving. But the direction is clear enough to bet on: people, tools and tokens each get more capable, and every foundation layer makes them work better together. You don't need certainty. You need to start with the loops you have conviction on.</p>
+ <span class="label">Closing thought</span>
+ <p>Nobody knows the exact shape this takes. The destination keeps moving. But the direction is clear enough to bet on: people, technology and agents each get more capable, and every foundation layer makes them work better together.</p>
+ <p>You don't need certainty. Start with the horizontal layer. Pick away at the vertical foundations. Then let the loops get stronger.</p>
+ <p class="hard-close">Context improves. Trust builds. The foundation deepens. Value compounds.</p>
  </div>
 </section>
 
@@ -687,5 +705,11 @@ footer{
 </footer>
 
 </div>
+<!-- Vercel Web Analytics -->
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<!-- Vercel Speed Insights -->
+<script>window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
 </html>
