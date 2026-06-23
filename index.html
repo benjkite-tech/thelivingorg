@@ -353,17 +353,6 @@ h2{
 .om-onramp strong{color:var(--ink);font-weight:600}
 
 /* ---- foundations ---- */
-.fork{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
-.fork-col{border-radius:16px;padding:24px;border:1px solid var(--chalk)}
-.fork-col.bolt{background:var(--ground);border-style:dashed}
-.fork-col.embed{background:var(--deep)}
-.fork-tag{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:12px}
-.fork-col.bolt .fork-tag{color:var(--ash)}
-.fork-col.embed .fork-tag{color:var(--ember)}
-.fork-col p{margin:0;font-size:16px;line-height:1.45}
-.fork-col.bolt p{color:var(--ash)}
-.fork-col.embed p{color:var(--ground)}
-.fork-lead{margin:32px 0 0;font-family:"Bebas Neue",sans-serif;font-size:30px;letter-spacing:.02em;color:var(--ink)}
 .foundation-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:32px 28px;margin-top:18px}
 .foundation{border-top:1px solid var(--chalk);padding-top:16px}
 .foundation h3{margin:0 0 8px;font-size:21px;line-height:1.05;letter-spacing:.02em}
@@ -487,9 +476,8 @@ footer{
  <h1>THE CONTINUOUS ORG</h1>
  <p class="hero-spine"><span>Human-powered.</span> <span>AI-accelerated.</span></p>
  <p class="hero-copy"><strong>AI won't just change individual tasks. It will change how organisations build, deliver and operate.</strong></p>
- <p class="hero-copy">The advantage goes to organisations that connect their systems, understand their context, and can act across platforms safely. Connecting systems isn't new - ERPs promised that for decades. What's new is intelligence and automation on top: the connected system can now reason and act, not just move data around.</p>
- <p class="hero-copy">The Continuous Org is a human-powered, AI-accelerated operating model for that shift: people, technology and agents working together through loops that monitor, decide, act and learn.</p>
- <p class="hero-copy">Where you start and how fast depends on what you are. A software company has more urgent needs. A business built on physical products, stores and decades of systems moves differently - same direction, different pace and entry point.</p>
+ <p class="hero-copy">The advantage goes to organisations that connect their systems, understand their context, and can act across platforms safely. Connecting systems isn't new. ERPs promised that for decades. What's new is intelligence and automation on top: the connected system can now reason and act, not just move data around. That shift is what The Continuous Org is about.</p>
+ <p class="hero-copy">Where you start and how fast depends on what you are. A software company has more urgent needs. A business built on physical products, stores and decades of systems moves differently. Same direction, different pace and entry point.</p>
 </section>
 
 <!-- 01 CONCEPT + PRINCIPLE (merged) -->
@@ -510,7 +498,7 @@ footer{
  <div class="card">
  <span class="tag-mono">Human-powered</span>
  <h3>People hold the judgement</h3>
- <p>Taste, context, and the call that can't be written as a rule - people read the room, carry the relationships, and know what good actually looks like. They also bring the thing AI never will: a real stake in the outcome, and someone to answer for it.</p>
+ <p>Taste, context, and the call that can't be written as a rule. People read the room, carry the relationships, and know what good actually looks like. They also bring the thing AI never will: a real stake in the outcome, and someone to answer for it.</p>
  </div>
  <div class="card">
  <span class="tag-mono">AI-accelerated</span>
@@ -536,16 +524,16 @@ footer{
  </div>
  <div>
  <h2>The old model stays. The motion changes.</h2>
- <p class="big-copy">Direction, leverage and work are as old as business. What changes is the motion: a live loop running through the company. Monitor, decide, act, learn, over and over, with each step handled by a person, technology, agent, or some mix of all three.</p>
+ <p class="big-copy">Direction, leverage and work are as old as business. What changes is the motion: a live loop running through the company, each step handled by a person, technology, an agent, or some mix of all three.</p>
  <p class="big-copy">Engineering teams have run this way for years - ship, watch, learn, fix. What's changing is the loop goes cross-org. The same pattern now runs through support, finance, ops, product - not just the codebase.</p>
  </div>
  </div>
 
  <dl class="loop-defs model-defs">
  <div><dt><span class="ld s1"></span>Monitor</dt><dd>Watch what's happening - a customer signal, a number moving, a request - and pick it up the moment it happens, not next quarter.</dd></div>
- <div><dt><span class="ld s2"></span>Decide</dt><dd>Work out the call. AI weighs the options and recommends; a human sets the rules and owns the ones that matter.</dd></div>
+ <div><dt><span class="ld s2"></span>Decide</dt><dd>Work out the call. An agent weighs the options and recommends; a human sets the rules and owns the ones that matter.</dd></div>
  <div><dt><span class="ld s3"></span>Act</dt><dd>Do it in the real systems - ship the change, send the reply, run the process. Not a note for someone to action later.</dd></div>
- <div><dt><span class="ld s4"></span>Learn</dt><dd>Feed the result back in, so the next turn is sharper. This only works if you've defined what "good" looks like and can measure against it - that's evals, and it's the part most orgs skip.</dd></div>
+ <div><dt><span class="ld s4"></span>Learn</dt><dd>Feed the result back in, so the next turn is sharper. This only works if you've defined what "good" looks like and can measure against it. That's evals, and it's the part most orgs skip.</dd></div>
  </dl>
 
  <!-- visual model -->
@@ -584,7 +572,7 @@ footer{
  <p>Experiments, product changes, growth bets - the next loop, in flight.</p>
  </div>
  </div>
- <p class="om-body">This is the work itself, sensing and adjusting as it goes. The data isn't a report you pull next quarter - it's read live, in the moment, and the org moves on it.</p>
+ <p class="om-body">This is the work itself, sensing and adjusting as it goes. The data is read live, in the moment, and the org moves on it.</p>
  </div>
 
  <div class="om-band om-leverage">
@@ -600,19 +588,20 @@ footer{
  </div>
  </div>
 
+ <p class="big-copy">That's the model. Here's an ordinary morning running on it.</p>
+
  <!-- PROOF: the model running -->
 <div class="trace">
  <div class="trace-head">
  <span class="label">One loop, start to finish</span>
  <h3>A customer hits a bug at 9am.</h3>
  </div>
- <p class="trace-intro">Watch the loop close across support, agent, engineering, finance and product in half an hour - with shared context and no lost handoff.</p>
  <div class="trace-steps">
  <div class="step"><div class="tag"><span class="dot"></span>9:00</div><span class="who">Support · human</span><p>Maya takes the ticket. She holds the relationship and reads the real problem under the complaint.</p></div>
  <div class="step"><div class="tag"><span class="dot"></span>9:02</div><span class="who">Agent · within rules</span><p>An agent pulls the account history, links three similar tickets, and drafts a fix plus a refund inside policy.</p></div>
  <div class="step"><div class="tag"><span class="dot"></span>9:15</div><span class="who">Engineering · human</span><p>Dev reviews the draft, sees the root cause is shared, ships the patch.</p></div>
  <div class="step"><div class="tag"><span class="dot"></span>9:18</div><span class="who">Finance · agent</span><p>The refund clears automatically - inside the limit Finance set for agents, logged for the record.</p></div>
- <div class="step"><div class="tag"><span class="dot"></span>9:30</div><span class="who">Product · signal</span><p>The pattern lands as a ranked signal on the roadmap - live, not a report read three weeks later.</p></div>
+ <div class="step"><div class="tag"><span class="dot"></span>9:30</div><span class="who">Product · signal</span><p>The pattern lands as a ranked signal on the roadmap, live. Nobody waits three weeks for a report.</p></div>
  <div class="step"><div class="tag"><span class="dot"></span>next</div><span class="who">Next case · faster</span><p>The next customer with this bug is caught before they even write in.</p></div>
  </div>
  <div class="trace-foot">Five functions. One shared context. Half an hour. No dropped handoffs, no stale reporting pack, a human on every call that mattered.</div>
@@ -642,22 +631,11 @@ footer{
  </div>
  <div>
  <h2>This is the fork: bolt AI on, or build the foundations that let it compound.</h2>
- <p class="big-copy">Watch the orgs going all-in - Shopify, Linear - pull away from the ones just bolting AI on (here's a licence, good luck). <strong>The gap won't be which models they use. Everyone gets the same models.</strong> It's the integration underneath - whether the next use case plugs into a foundation that already exists, or gets wired up from scratch every time.</p>
+ <p class="big-copy">Watch the orgs going all-in - Shopify, Linear - pull away from the ones just bolting AI on (here's a licence, good luck). <strong>The gap won't be which models they use. Everyone gets the same models.</strong> It's the integration underneath. Bolt each tool on point to point and it's fast in the demo, then every new model or workflow means rewiring, and the wiring hardens into the lock-in it was meant to avoid. Build the foundation once and the next use case just plugs in.</p>
  </div>
  </div>
 
- <div class="fork">
- <div class="fork-col bolt">
- <span class="fork-tag">The bolt-on org</span>
- <p>Buys tools and wires each one to whatever it touches. Point to point, use case by use case. Fast in the demo. Then every new model, vendor or workflow means rewiring - and the integrations harden into the lock-in they were meant to avoid.</p>
- </div>
- <div class="fork-col embed">
- <span class="fork-tag">The intelligent org</span>
- <p>Builds the foundation first - shared context, identity, evaluation, controlled access. Every new use case plugs into infrastructure that already exists. Slower to look impressive. Then it compounds, while the bolt-on org keeps rebuilding.</p>
- </div>
- </div>
-
- <p class="beat-sub">The foundation has two axes. Most orgs build along one and stop. <strong>The advantage compounds when you build both.</strong></p>
+ <p class="beat-sub">Most orgs build along one axis and stop. <strong>The advantage compounds when you build both.</strong></p>
 
  <div class="depth">
  <div class="depth-head"><span class="depth-tag shallow">Horizontal · the baseline</span><span class="depth-time">days to months · broad, shallow</span></div>
@@ -672,10 +650,10 @@ footer{
  <div class="depth-head"><span class="depth-tag deep">Vertical · the moat</span><span class="depth-time">months to years · deep, narrow</span></div>
  <p class="depth-intro">Then go deep. This is where it stops being a clever integration and becomes a company that can reason across its own context. Shared definitions, governed access, identity, evaluation and operating rhythm make the advantage harder to copy. <strong>It's also what makes multi-player mode possible</strong>: single-player AI needs little underneath it, but a whole org working off shared live state needs this. Slow, expensive, and the part nobody can copy.</p>
  <div class="foundation-grid two">
- <div class="foundation"><h3>Semantic layer</h3><p><strong>How the business connects.</strong> One shared definition of what "customer", "revenue" or "active" actually mean, and how every project, product and team relate. Without it, each team's AI quietly uses different definitions and reasons wrong. This is the real architecture - and the moat.</p><span class="tooling">e.g. metric/semantic layers · knowledge graphs · unified data model</span></div>
+ <div class="foundation"><h3>Semantic layer</h3><p><strong>How the business connects.</strong> One shared definition of what "customer", "revenue" or "active" actually mean, and how every project, product and team relate. Without it, each team's AI quietly uses different definitions and reasons wrong. This is the real architecture. And the moat.</p><span class="tooling">e.g. metric/semantic layers · knowledge graphs · unified data model</span></div>
  <div class="foundation"><h3>Context layer</h3><p>Getting the right facts in front of the model - so it answers from <strong>your</strong> reality, not a guess. Basic retrieval is easy. The harder part is surfacing customer history, policies, decisions, definitions and current state that's useful, current and permission-aware.</p><span class="tooling">e.g. retrieval · vector search · semantic layers · access-aware retrieval</span></div>
  <div class="foundation"><h3>Identity, permissions &amp; authority</h3><p>Knowing who an agent is matters. Knowing <strong>what it's allowed to do</strong> matters more. Can this agent view a customer record, issue a refund, update a workflow or move money? Up to what limit, on whose authority, and with what audit trail?</p><span class="tooling">e.g. agent identity · scoped permissions · audit trails</span></div>
- <div class="foundation"><h3>Evaluation &amp; observability</h3><p>You can only improve what you can measure - and AI performance is largely defined by how well you've defined "good". Evals turn that into a discipline: rubrics, traces, monitoring and incident review, not just confident-looking outputs. <strong>The teams shipping real agentic work treat evals as core IP, not a pre-launch check.</strong></p><span class="tooling">e.g. rubrics · traces · eval datasets · production monitoring</span></div>
+ <div class="foundation"><h3>Evaluation &amp; observability</h3><p>You can only improve what you can measure, and AI performance is largely defined by how well you've defined "good". Evals turn that into a discipline: rubrics, traces, monitoring and incident review. <strong>The teams shipping real agentic work treat evals as core IP, not a pre-launch check.</strong></p><span class="tooling">e.g. rubrics · traces · eval datasets · production monitoring</span></div>
  </div>
  </div>
 
